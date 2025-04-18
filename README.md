@@ -44,7 +44,7 @@ A grid-based task timer application that allows users to create and manage count
 No installation required! Simply clone or download this repository and open `index.html` in any modern web browser.
 
 ```
-git clone https://github.com/yourusername/hubble-task.git
+git clone https://github.com/Jaiihdev/Hubble-task.git
 cd hubble-task
 ```
 
