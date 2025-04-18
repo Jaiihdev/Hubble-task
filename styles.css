@@ -1,0 +1,174 @@
+/* Custom styles for Hubble Task */
+
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Grid Canvas */
+.grid-canvas {
+    background-color: #fff;
+    background-image: 
+        linear-gradient(rgba(200, 200, 200, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    min-height: 75vh;
+    position: relative;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Task Cards */
+.task-card {
+    position: absolute;
+    width: 200px;
+    min-height: 100px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 8px;
+    cursor: move;
+    z-index: 10;
+    border-left: 4px solid #007bff;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.task-title {
+    font-weight: bold;
+    word-wrap: break-word;
+    max-width: 130px;
+    display: inline-block;
+}
+
+.task-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.task-controls button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px;
+    line-height: 1;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-play-pause {
+    color: #28a745;
+}
+
+.task-play-pause:hover {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.task-close {
+    color: #dc3545;
+}
+
+.task-close:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.task-timer {
+    font-family: monospace;
+    font-size: 24px;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: 700;
+}
+
+/* Timer Running Animation */
+.timer-running {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Task Colors */
+.task-blue {
+    border-left-color: #007bff;
+}
+
+.task-green {
+    border-left-color: #28a745;
+}
+
+.task-orange {
+    border-left-color: #fd7e14;
+}
+
+.task-red {
+    border-left-color: #dc3545;
+}
+
+.task-purple {
+    border-left-color: #6f42c1;
+}
+
+/* Task color when timer is expired */
+.task-expired {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Task history items */
+.task-history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.task-history-item .task-name {
+    font-weight: 500;
+}
+
+.task-history-item .task-duration {
+    font-family: monospace;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.timer-display {
+    font-family: monospace;
+}
+
+#timer {
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.task-time {
+    font-family: monospace;
+    font-weight: 500;
+}
+
+.task-timestamp {
+    font-size: 0.85rem;
+    color: #6c757d;
+} 
